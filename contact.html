@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cyber Forensics Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or want to work together, feel free to reach out!</p>
+
+        <!-- Success and Error Messages -->
+        <?php if (!empty($successMessage)): ?>
+            <div class="success message"><?php echo $successMessage; ?></div>
+        <?php endif; ?>
+        <?php if (!empty($errorMessages)): ?>
+            <?php foreach ($errorMessages as $error): ?>
+                <div class="error message"><?php echo $error; ?></div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+        <!-- Contact Form -->
+        <form action="" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>

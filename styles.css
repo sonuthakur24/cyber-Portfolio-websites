@@ -1,0 +1,315 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a23;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation styling */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+nav ul li a.active {
+    color: #ffffff;
+}
+
+/* Hero section styling */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background: url('https://via.placeholder.com/1200x800?text=Cyber+Background') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content, .hero-stats {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 24px;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* Call-to-action button styling */
+.cta-btn {
+    background: #ff4d4d;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ffffff;
+    color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Hero image styling */
+.hero-image {
+    max-width: 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #ffffff;
+}
+
+/* Hero stats styling */
+.hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+    color: #ffffff;
+}
+
+.stat h4 {
+    font-size: 36px;
+    color: #ff4d4d;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Content section styling */
+.content-section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    color: #ff4d4d;
+    margin-bottom: 40px;
+}
+
+/* Card grid styling */
+.skill-grid, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #1a1a3d;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff4d4d;
+}
+
+.card h3 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cccccc;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Contact Section Styling */
+.contact {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1e293b;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #334155;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    background: #1e293b;
+}
+
+/* Button Styling */
+.cta-btn {
+    background: #ff4d4d;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ffffff;
+    color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Success and Error Messages */
+.success.message,
+.error.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.success.message {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error.message {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
